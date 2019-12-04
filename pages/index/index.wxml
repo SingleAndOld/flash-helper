@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class='index'>
+  <open-data type='userAvatarUrl'  class='index_header'/>
+  <view class='index_time'>{{time}}</view>
+  <view>{{say}}, <open-data type='userNickName' class='index_userName'/>.</view>
+</view>

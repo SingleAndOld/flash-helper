@@ -1,6 +1,16 @@
 <!--index.wxml-->
-<view class='index'>
-  <open-data type='userAvatarUrl'  class='index_header'/>
-  <view class='index_time'>{{time}}</view>
+<view class='index' hidden="{{isHidePage}}" style='background:url({{bg}}) no-repeat; background-size: 100% 100%;'>
+  <view class='index_headerBox' >
+    <open-data type='userAvatarUrl'  class='index_header'/>
+  </view>
+  <view class="clock" id="clock">
+    <view  wx:for="{{flipObjs}}" wx:key="{{index}}" class='flipBox'>
+      <view class="flip down {{item.isGo && isGo ? 'go' :''}}">
+          <view class="digital front {{item.frontText}}"></view>
+          <view class="digital back  {{item.backText}}"></view>
+      </view>
+      <text wx:if="{{index===1 || index===3}}">:</text>
+    </view>
+  </view>
   <view>{{say}}, <open-data type='userNickName' class='index_userName'/>.</view>
 </view>

@@ -3,17 +3,23 @@
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  background: url('https://6465-dev-wm8h8-1300819345.tcb.qcloud.la/background.jpg?sign=47572e7b60d996efdbe0b54a1e58bcec&t=1575298814') no-repeat;
+  /* background: url('https://6465-dev-wm8h8-1300819345.tcb.qcloud.la/afternoon.jpg?sign=feb4ccfaefae5b249a8f616a732141d4&t=1575801085') no-repeat; */
   background-size: 100% 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
 }
+.index_headerBox{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
  .index_header{
+   display: block;
     width: 120rpx;
     height: 120rpx;
-    border-radius: 50%;
   }
   .index_time{
     font-size: 60rpx;
@@ -23,3 +29,208 @@
   .index_userName{
     display: inline;
   }
+  /* components/timeModule/time.wxss */
+.flipBox{
+  display:inline-block;
+}
+.flip {
+    display: inline-block;
+    position: relative;
+    width: 60rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    border: solid 1rpx #000;
+    border-radius: 10rpx;
+    background: #fff;
+    font-size: 66rpx;
+    color: #fff;
+    box-shadow: 0 0 6rpx rgba(0, 0, 0, .5);
+    text-align: center;
+    font-family: "Helvetica Neue"
+}
+
+.flip .digital:before,
+.flip .digital:after {
+    content: "";
+    width: 59rpx;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #000;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.flip .digital:before {
+    top: 0;
+    bottom: 50%;
+    border-radius: 10rpx 10rpx 0 0;
+    border-bottom: solid 1rpx #666;
+}
+
+.flip .digital:after {
+    top: 50%;
+    bottom: 0;
+    border-radius: 0 0 10rpx 10rpx;
+    line-height: 0;
+}
+
+/*向下翻*/
+.flip.down .front:before {
+    z-index: 3;
+}
+
+.flip.down .back:after {
+    z-index: 2;
+    opacity: 0;
+    transform-origin: 50% 0%;
+    transform: perspective(160rpx) rotateX(180deg);
+}
+
+.flip.down .front:after,
+.flip.down .back:before {
+    z-index: 1;
+}
+
+.flip.down.go .front:before {
+    transform-origin: 50% 100%;
+    animation: frontFlipDown 0.6s ease-in-out both;
+    box-shadow: 0 -2rpx 6rpx rgba(255, 255, 255, 0.3);
+    backface-visibility: hidden;
+}
+
+.flip.down.go .back:after{
+    animation: backFlipDown 0.6s ease-in-out both;
+}
+
+/*向上翻*/
+.flip.up .front:after {
+    z-index: 3;
+}
+
+.flip.up .back:before {
+    z-index: 2;
+    transform-origin: 50% 100%;
+    transform: perspective(160rpx) rotateX(-180deg);
+}
+
+.flip.up .front:before,
+.flip.up .back:after {
+    z-index: 1;
+}
+
+.flip.up.go .front:after {
+    transform-origin: 50% 0;
+    animation: frontFlipUp 0.6s ease-in-out both;
+    box-shadow: 0 2rpx 6rpx rgba(255, 255, 255, 0.3);
+    backface-visibility: hidden;
+}
+
+.flip.up.go .back:before {
+    animation: backFlipUp 0.6s ease-in-out both;
+}
+
+@keyframes frontFlipDown {
+    0% {
+        transform: perspective(160rpx) rotateX(0deg);
+    }
+
+    100% {
+        transform: perspective(160rpx) rotateX(-180deg);
+    }
+}
+
+@keyframes backFlipDown {
+    0% {
+        transform: perspective(160rpx) rotateX(180deg);
+    }
+
+    100% {
+        transform: perspective(160rpx) rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+
+@keyframes frontFlipUp {
+    0% {
+        transform: perspective(160rpx) rotateX(0deg);
+    }
+
+    100% {
+        transform: perspective(160rpx) rotateX(180deg);
+    }
+}
+
+@keyframes backFlipUp {
+    0% {
+        transform: perspective(160rpx) rotateX(-180deg);
+    }
+
+    100% {
+        transform: perspective(160rpx) rotateX(0deg);
+    }
+}
+
+.flip .number0:before,
+.flip .number0:after {
+    content: "0";
+}
+
+.flip .number1:before,
+.flip .number1:after {
+    content: "1";
+}
+
+.flip .number2:before,
+.flip .number2:after {
+    content: "2";
+}
+
+.flip .number3:before,
+.flip .number3:after {
+    content: "3";
+}
+
+.flip .number4:before,
+.flip .number4:after {
+    content: "4";
+}
+
+.flip .number5:before,
+.flip .number5:after {
+    content: "5";
+}
+
+.flip .number6:before,
+.flip .number6:after {
+    content: "6";
+}
+
+.flip .number7:before,
+.flip .number7:after {
+    content: "7";
+}
+
+.flip .number8:before,
+.flip .number8:after {
+    content: "8";
+}
+
+.flip .number9:before,
+.flip .number9:after {
+    content: "9";
+}
+
+.clock {
+    text-align: center;
+    margin-top: 20rpx;
+}
+
+.clock text {
+    display: inline-block;
+    line-height: 102rpx;
+    font-size: 66rpx;
+    font-style: normal;
+    vertical-align: top;
+}

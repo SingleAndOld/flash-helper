@@ -163,6 +163,9 @@ Page({
   },
   onUnload(){
     clearInterval(this.data.times)
+  },
+  onShareAppMessage(){
+    
   }
   
 })

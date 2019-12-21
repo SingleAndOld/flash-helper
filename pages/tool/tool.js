@@ -1,9 +1,5 @@
-//logs.js
+// logs.js
 Page({
-  data: {
-    
-  },
-  onLoad: function () {
-    
-  }
+  data: {},
+  onLoad: function () {}
 })

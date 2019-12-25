@@ -24,6 +24,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
+  // 腾讯云中文说明讲解 https://cloud.tencent.com/developer/chapter/12618
   rules: {
     "no-cond-assign": 2,
     // 禁止 function 定义中出现重名参数
@@ -218,7 +219,7 @@ module.exports = {
     //////////////
     // ES6.相关 //
     //////////////
-    // 每个模块只能使用一个import
+    // 每个模块只能使用一个import:此规则要求从单个模块进行的所有导入都以单一import语句存在
     "no-duplicate-imports": 2,
     // 要求箭头函数体使用大括号
     "arrow-body-style": 2,

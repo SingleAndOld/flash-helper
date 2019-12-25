@@ -11,3 +11,7 @@
 
 - 增加eslint
     - 禁止使用尾空格，尾空行，尾逗号，尾分号
+
+## 2019-12-25
+- 发现实用的腾讯云开发者手册
+    - [腾讯云开发者手册](https://cloud.tencent.com/developer/devdocs)

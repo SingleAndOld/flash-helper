@@ -1,10 +1,10 @@
 /**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-} 
+/**
+ * 此文件的样式将用于整个小程序，必须加上前缀，gl-*表示是全局适用，如gl-page
+ * 样式命名规范：前缀 + 部位 + 功能描述
+*/
+.gl-page_full{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}

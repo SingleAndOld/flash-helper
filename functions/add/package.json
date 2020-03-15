@@ -8,7 +8,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "wx-server-sdk": "latest"
+    "wx-server-sdk": "^1.8.2"
   },
   "devDependencies": {},
   "keywords": [],

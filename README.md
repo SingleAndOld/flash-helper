@@ -3,9 +3,10 @@
 - 新建小程序项目
 
 ## 2019-12-21
+- 开启云开发后，在设置=>环境设置中，确定环境名称，得到环境ID
 - 小程序增加云函数add
     1. 在根目录新建functions文件夹，
-    2. 在project.config.json 中增加了字段 cloudfunctionRoot：'functions/' 
+    2. 在project.config.json 中增加了字段 cloudfunctionRoot：'./functions/' 
     3. app.js增加字段 cloud: true
     4. 对着functions目录，右键新增node.js云函数，填入云函数名字，本地终端进入该文件夹，npm install 初始化，右键上传云函数
 
@@ -15,3 +16,13 @@
 ## 2019-12-25
 - 发现实用的腾讯云开发者手册
     - [腾讯云开发者手册](https://cloud.tencent.com/developer/devdocs)
+
+## 2020-03-06 
+> TODO
+- 决定下一个功能开发，使用canvas-2D绘制一个画图板：
+    - 可以让用户上传手机相册的图片，添加自定义字体文件，并且可以修改文字大小，旋转角度，位置等。
+
+## 2020-03-15
+> TODO
+- 开发一个启动页面，中间是闪电的图标，下面一行是用户头像加昵称，随后，闪电图标缩小到不见，头像和昵称像左上角移动，直到左上角，昵称消失，头像保留，tab页面保留，点击头像跳转到我的页面
+- 创建一个专属于flash小程序的图标字体库

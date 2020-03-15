@@ -1,0 +1,4 @@
+<!--pages/test/test.wxml-->
+<view class="test-con1">
+  <image class="test-image" src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" mode="aspectFill"></image>
+</view>

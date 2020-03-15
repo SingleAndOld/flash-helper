@@ -1,0 +1,3 @@
+<!--pages/begin/begin.wxml-->
+<!-- 启动页面，放在每次打开小程序时首先打开的页面 -->
+<text>welcome！</text>

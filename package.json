@@ -4,7 +4,8 @@
   "description": "- 新建小程序项目",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix pages utils app.js"
   },
   "repository": {
     "type": "git",
